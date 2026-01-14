@@ -1,4 +1,4 @@
-FROM nginx as nginxBuilder
+FROM nginx:1.29.4-trixie as nginxBuilder
 RUN apt-get update && \
     apt install net-tools -y && \
     apt install iputils-ping -y
