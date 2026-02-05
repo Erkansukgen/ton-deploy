@@ -1,3 +1,3 @@
-FROM postgres as ton_migration
+FROM postgres:18.1-trixie as ton_migration
 
 COPY --from=ton_builder /ton/medium-client/create_db.sql ./docker-entrypoint-initdb.d/init.sql
